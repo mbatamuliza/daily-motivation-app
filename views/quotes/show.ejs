@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"<%= quote.content %>" | Daily Motivation</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <main class="container">
+        <div class="quote-display">
+            <blockquote>"<%= quote.content %>"</blockquote>
+            <% if (quote.author) { %>
+            <p class="author">- <%= quote.author %></p>
+           <% } %>
+        </div>
+        <div class="actions">
+            <a href="/quotes/<%= quote._id %>/edit" class="btn-edit">Edit Quote</a> 
+            
+            <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="btn-delete">Delete Quote</button>
+           </form>
+           <a href="/quotes" class="btn-back">Back to all Quotes</a>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+<nav>
+    <% if (user) { %>
+    <a href="/" class="logo">Daily Motivation</a>
+    <div class="nav-links">
+        <a href="/quotes/new" class="nav-btn btn-add">+ Add Quote</a>
+
+        <a href="/auth/sign-out" class="nav-btn btn-exit">Exit</a>
+    </div>
+    <% } else { %>
+    <a href="/" class="logo">Daily Motivation</a>
+    <div class="nav-links">
+        <a href="/auth/sign-in" class="nav-btn btn-login">Sign In</a>
+        <a href="/auth/sign-up" class="nav-btn btn-signup">Sign Up</a>
+    </div>
+    <% } %>
+</nav>

@@ -1,0 +1,141 @@
+.motivation-body {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5b51d6b38f5130e19d96448b/1536724096940-2KAHXII9GPYPRLQNDTNL/Sunset+Widescreen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-header {
+      font-weight: bold;
+      color: white;
+      font-size: 4em;
+      margin: 40px 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quote-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.7);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+  
+  .current-quote {
+      font-size: 2em;
+      line-height: 1.4;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+  
+  .quote-btn {
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 12px 25px;
+      border-radius: 25px;
+      margin: 10px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .new-quote-btn {
+      background-color: #4caf50; 
+      color: white;
+  }
+  
+  .new-quote-btn {
+      background-color: #45a049;
+  
+  }
+  
+  .save-quote-btn {
+      background-color: #2196f3;
+      color: white;
+  }
+  
+  .save-quote-btn:hover {
+      background-color: #0b7dda;
+  }
+  
+  .saved-quotes {
+      margin-top: 40px;
+      width: 100%;
+  }
+  
+  .quote-card {
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+      padding:20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0.1);
+  
+  }
+  
+  
+  .quote-form {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  .quote-group {
+      margin-bottom: 20px;
+  }
+  
+  .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+  }
+  
+  .form-group textarea,
+  .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none
+  }
+  
+  .auth-container {
+      background-color: rgba(0,0,0,0.7);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 50px auto;
+  
+  }
+  
+  .auth-btn {
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 12px 25px;
+      border-radius: 25px;
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin: 15px 0;
+  
+  }
+  
+  .signup-btn {
+      background-color: #ce4866;
+      color: white;
+  }
+  
+  .signin-btn {
+      background-color: #f6e7e7;
+      color: #1c2e5b;
+  }
+  

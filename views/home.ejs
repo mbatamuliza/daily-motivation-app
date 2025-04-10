@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Daily Motivation</title>
+</head>
+<body>
+    <%- include('./partials/_navbar.ejs') %>
+
+    <main class="home-container">
+        <h1>Daily Motivation</h1>
+        <p>Your Daily Dose Of Inspiration!.</p>
+
+        <% if (user) { %>
+            <p>Welcome back, ready for some motivation?</p>
+            <a href="/quotes" class="btn">View Your Quotes</a>
+        <% } else { %>
+            <div class="auth-links">
+                <a href="/auth/sign-up" class="btn">Sign up</a>
+                <a href="/auth/sign-in" class="btn">Sign in</a>
+            </div>
+        <% } %>
+    </main> 
+</body>
+</html>

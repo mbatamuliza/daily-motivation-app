@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quote | Daily Motivation</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <main class="auth-container">
+        <h1>Add New Quote</h1>
+
+        <form action="/quotes" method="POST">
+            <div class="form-group">
+                <label for="content">Write Your Quote:</label>
+                <textarea name="content" id="content" required placeholder="Enter your motivational quote here"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="author">Author (Optional):</label>
+                <input type="text" name="author" id="author" placeholder="Anonymous">
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Save Quote</button>
+                <a href="/quotes" class="btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>

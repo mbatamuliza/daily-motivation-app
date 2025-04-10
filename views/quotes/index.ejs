@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Daily Motivation</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <main class="auth-container">
+        <h1>Daily Motivation</h1>
+        <p class="daily-dose">"Your daily dose of inspiration!"</p>
+
+        <div class="current-quote">
+            <blockquote>"<%= currentQuote.content %>"</blockquote>
+            <p class="author">- <%= currentQuote.author || 'Anonymous' %></p>
+            <div class="quote-actions">
+                <a href="/quotes/new" class="btn btn-new">New Quote</a>
+            </div>
+        </div>
+
+        <h2>Your Favorite:</h2>
+        <div class="saved-quotes">
+            <% if (savedQuotes && savedQuotes.length > 0) { %>
+                <% savedQuotes.forEach(quote => { %>
+                    <div class="quote-card">
+                        <p>"<%= quote.content %>"</p>
+                        <% if (quote.author) { %>
+                            <p class="author">- <%= quote.author || 'Anonymous' %></p>
+                        <% } %>
+                        <div class="actions">
+                            <a href="/quotes/<%= quote._id %>/edit" class="btn-edit">Edit</a>
+
+                            <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p class="no-quotes">You haven't saved any quotes yet.</p>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
+

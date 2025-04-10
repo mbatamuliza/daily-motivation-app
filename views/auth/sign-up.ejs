@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Daily Motivation</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs')%>
+
+    <main class="auth-container">
+    <h1>Create Your Account</h1>
+
+    
+       <form action="/auth/sign-up" method="POST">
+        <div class ="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter email">
+
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required minlength="8">
+
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Comfirm Password:</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" required>
+          </div>
+
+          <button type="submit" class="btn">Sign UP</button>
+       </form>
+
+       <p>Already have an account?<a href="/auth/sign-in">Sign In</a></p>
+    </main>
+
+</body>
+</html>
