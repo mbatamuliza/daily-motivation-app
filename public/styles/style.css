@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
   }
+
+  nav a {
+    color: white;
+  }
   
   .main-header {
       font-weight: bold;
